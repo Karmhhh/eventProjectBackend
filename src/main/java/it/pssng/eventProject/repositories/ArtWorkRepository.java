@@ -16,7 +16,7 @@ import java.util.List;
 
  // You must specify the Entity which this repository references to and the type of entity's primary key
 public interface ArtWorkRepository extends JpaRepository<ArtWork,Long> {
-    @Query(value = "SELECT * FROM exhibitions WHERE location = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM artworks WHERE location = ?1", nativeQuery = true)
     List<ArtWork> findByLocation(Long locationToSearch);
 }
 
